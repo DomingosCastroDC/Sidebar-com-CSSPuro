@@ -1,0 +1,23 @@
+body,html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.home {
+    background-color: red;
+    color:white;
+    text-align: center;
+}
+
+.search {
+    background-color: green;
+    color:white;
+    text-align: center;
+}
+
+.about {
+    background-color: orange;
+    color:white;
+    text-align: center;
+}
+

@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: unset;
+}
+
+#header {
+    background-color: #ededed;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;    
+
+}
+
+#header {
+    position: relative;
+    left: 0;
+    transition: 0.9s left;
+}
+
+#toggler {
+    display:none;
+}
+
+#content {
+    position : relative;
+    left: 0;
+    transition: 0.9s left;
+    padding: 28px;
+}
+
+#menu{
+    position: fixed;
+    left:-245px;
+    top:0;
+    bottom: 0;
+    width: 245px;
+    background-color:green;
+    transition: 0.9s left;
+}
+
+
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+
+
+#menu ul >li > a{
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    color:white;
+    
+}
+
+#menu ul >li > a:hover{
+    background-color: rgb(6, 83, 6);
+}
+
+#toggler:checked~#header{
+    left: 245px;
+}
+
+#toggler:checked~#header,
+#toggler:checked~#content{
+    width: calc(100% - 245px)
+}
+
+
+#toggler:checked~#content{
+    left: 245px;
+}
+
+#toggler:checked~#menu{
+    left: 0;
+}
+
+label[for=toggler] {
+    cursor: pointer;
+    display: flex;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+label[for=toggler] span{
+    display: block;
+    height: 4px;
+    width: 30px;
+    background-color: black;
+}
